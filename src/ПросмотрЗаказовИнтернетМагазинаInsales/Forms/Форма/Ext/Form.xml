@@ -1,0 +1,1799 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьСвязь" id="101">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ПроверитьСвязь</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьСвязьРасширеннаяПодсказка" id="102"/>
+			</Button>
+			<Button name="ФормаЗагрузитьЗаказы" id="103">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ЗагрузитьЗаказы</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьЗаказыРасширеннаяПодсказка" id="104"/>
+			</Button>
+			<Button name="ФормаПрерватьЗагрузку" id="105">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ПрерватьЗагрузку</CommandName>
+				<ExtendedTooltip name="ФормаПрерватьЗагрузкуРасширеннаяПодсказка" id="106"/>
+			</Button>
+			<Button name="ФормаВыгрузитьВТабличныйДокумент" id="107">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ВыгрузитьВТабличныйДокумент</CommandName>
+				<ExtendedTooltip name="ФормаВыгрузитьВТабличныйДокументРасширеннаяПодсказка" id="108"/>
+			</Button>
+			<Button name="ФормаСохранитьСыройОтвет" id="109">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.СохранитьСыройОтвет</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьСыройОтветРасширеннаяПодсказка" id="110"/>
+			</Button>
+			<Button name="ФормаСохранитьНастройкиВФайл" id="111">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.СохранитьНастройкиВФайл</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиВФайлРасширеннаяПодсказка" id="112"/>
+			</Button>
+			<Button name="ФормаЗагрузитьНастройкиИзФайла" id="113">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="114"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="371">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки подключения и отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="376"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиКолонки" id="377">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиКолонкиРасширеннаяПодсказка" id="378"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПодключение" id="372">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение к магазину</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="373"/>
+							<ChildItems>
+								<InputField name="АдресМагазина" id="193">
+									<DataPath>АдресМагазина</DataPath>
+									<ContextMenu name="АдресМагазинаКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="АдресМагазинаРасширеннаяПодсказка" id="194"/>
+								</InputField>
+								<InputField name="ИдентификаторКлюча" id="195">
+									<DataPath>ИдентификаторКлюча</DataPath>
+									<ContextMenu name="ИдентификаторКлючаКонтекстноеМеню" id="387"/>
+									<ExtendedTooltip name="ИдентификаторКлючаРасширеннаяПодсказка" id="196"/>
+								</InputField>
+								<InputField name="ПарольКлюча" id="197">
+									<DataPath>ПарольКлюча</DataPath>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="ПарольКлючаКонтекстноеМеню" id="389"/>
+									<ExtendedTooltip name="ПарольКлючаРасширеннаяПодсказка" id="198"/>
+								</InputField>
+								<InputField name="Таймаут" id="199">
+									<DataPath>Таймаут</DataPath>
+									<ContextMenu name="ТаймаутКонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="ТаймаутРасширеннаяПодсказка" id="200"/>
+								</InputField>
+								<InputField name="РезультатПроверки" id="201">
+									<DataPath>РезультатПроверки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Height>3</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="РезультатПроверкиКонтекстноеМеню" id="393"/>
+									<ExtendedTooltip name="РезультатПроверкиРасширеннаяПодсказка" id="202"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтбор" id="374">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор заказов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="375"/>
+							<ChildItems>
+								<InputField name="ПериодС" id="203">
+									<DataPath>ПериодС</DataPath>
+									<ContextMenu name="ПериодСКонтекстноеМеню" id="395"/>
+									<ExtendedTooltip name="ПериодСРасширеннаяПодсказка" id="204"/>
+								</InputField>
+								<InputField name="ПериодПо" id="205">
+									<DataPath>ПериодПо</DataPath>
+									<ContextMenu name="ПериодПоКонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="ПериодПоРасширеннаяПодсказка" id="206"/>
+								</InputField>
+								<LabelDecoration name="ПодсказкаОтбора" id="207">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Магазин отбирает заказы по дате изменения и принимает только нижнюю границу. Верхняя применяется после получения данных.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаОтбораКонтекстноеМеню" id="399"/>
+									<ExtendedTooltip name="ПодсказкаОтбораРасширеннаяПодсказка" id="208"/>
+								</LabelDecoration>
+								<InputField name="РазмерСтраницы" id="209">
+									<DataPath>РазмерСтраницы</DataPath>
+									<ContextMenu name="РазмерСтраницыКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="РазмерСтраницыРасширеннаяПодсказка" id="210"/>
+								</InputField>
+								<InputField name="ПределСтраниц" id="211">
+									<DataPath>ПределСтраниц</DataPath>
+									<ContextMenu name="ПределСтраницКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="ПределСтраницРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="СостояниеЗагрузки" id="213">
+									<DataPath>СостояниеЗагрузки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СостояниеЗагрузкиКонтекстноеМеню" id="404"/>
+									<ExtendedTooltip name="СостояниеЗагрузкиРасширеннаяПодсказка" id="214"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Заказы" id="215">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>10</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<DataPath>Заказы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗаказыКонтекстноеМеню" id="216"/>
+			<AutoCommandBar name="ЗаказыКоманднаяПанель" id="217"/>
+			<ExtendedTooltip name="ЗаказыРасширеннаяПодсказка" id="218"/>
+			<SearchStringAddition name="ЗаказыСтрокаПоиска" id="406">
+				<AdditionSource>
+					<Item>Заказы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыСтрокаПоискаКонтекстноеМеню" id="407"/>
+				<ExtendedTooltip name="ЗаказыСтрокаПоискаРасширеннаяПодсказка" id="408"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаказыСостояниеПросмотра" id="409">
+				<AdditionSource>
+					<Item>Заказы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыСостояниеПросмотраКонтекстноеМеню" id="410"/>
+				<ExtendedTooltip name="ЗаказыСостояниеПросмотраРасширеннаяПодсказка" id="411"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаказыУправлениеПоиском" id="412">
+				<AdditionSource>
+					<Item>Заказы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаказыУправлениеПоискомКонтекстноеМеню" id="413"/>
+				<ExtendedTooltip name="ЗаказыУправлениеПоискомРасширеннаяПодсказка" id="414"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ЗаказыПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗаказыНомерНаСайте" id="219">
+					<DataPath>Заказы.НомерНаСайте</DataPath>
+					<ContextMenu name="ЗаказыНомерНаСайтеКонтекстноеМеню" id="220"/>
+					<ExtendedTooltip name="ЗаказыНомерНаСайтеРасширеннаяПодсказка" id="221"/>
+				</LabelField>
+				<LabelField name="ЗаказыИдентификатор" id="222">
+					<DataPath>Заказы.Идентификатор</DataPath>
+					<ContextMenu name="ЗаказыИдентификаторКонтекстноеМеню" id="223"/>
+					<ExtendedTooltip name="ЗаказыИдентификаторРасширеннаяПодсказка" id="224"/>
+				</LabelField>
+				<LabelField name="ЗаказыСоздан" id="225">
+					<DataPath>Заказы.Создан</DataPath>
+					<ContextMenu name="ЗаказыСозданКонтекстноеМеню" id="226"/>
+					<ExtendedTooltip name="ЗаказыСозданРасширеннаяПодсказка" id="227"/>
+				</LabelField>
+				<LabelField name="ЗаказыИзменен" id="228">
+					<DataPath>Заказы.Изменен</DataPath>
+					<ContextMenu name="ЗаказыИзмененКонтекстноеМеню" id="229"/>
+					<ExtendedTooltip name="ЗаказыИзмененРасширеннаяПодсказка" id="230"/>
+				</LabelField>
+				<LabelField name="ЗаказыПокупатель" id="231">
+					<DataPath>Заказы.Покупатель</DataPath>
+					<ContextMenu name="ЗаказыПокупательКонтекстноеМеню" id="232"/>
+					<ExtendedTooltip name="ЗаказыПокупательРасширеннаяПодсказка" id="233"/>
+				</LabelField>
+				<LabelField name="ЗаказыСумма" id="234">
+					<DataPath>Заказы.Сумма</DataPath>
+					<ContextMenu name="ЗаказыСуммаКонтекстноеМеню" id="235"/>
+					<ExtendedTooltip name="ЗаказыСуммаРасширеннаяПодсказка" id="236"/>
+				</LabelField>
+				<LabelField name="ЗаказыОплачен" id="237">
+					<DataPath>Заказы.Оплачен</DataPath>
+					<ContextMenu name="ЗаказыОплаченКонтекстноеМеню" id="238"/>
+					<ExtendedTooltip name="ЗаказыОплаченРасширеннаяПодсказка" id="239"/>
+				</LabelField>
+				<LabelField name="ЗаказыСтатусВыполнения" id="240">
+					<DataPath>Заказы.СтатусВыполнения</DataPath>
+					<ContextMenu name="ЗаказыСтатусВыполненияКонтекстноеМеню" id="241"/>
+					<ExtendedTooltip name="ЗаказыСтатусВыполненияРасширеннаяПодсказка" id="242"/>
+				</LabelField>
+				<LabelField name="ЗаказыСлужбаДоставки" id="243">
+					<DataPath>Заказы.СлужбаДоставки</DataPath>
+					<ContextMenu name="ЗаказыСлужбаДоставкиКонтекстноеМеню" id="244"/>
+					<ExtendedTooltip name="ЗаказыСлужбаДоставкиРасширеннаяПодсказка" id="245"/>
+				</LabelField>
+				<LabelField name="ЗаказыСтоимостьДоставки" id="246">
+					<DataPath>Заказы.СтоимостьДоставки</DataPath>
+					<ContextMenu name="ЗаказыСтоимостьДоставкиКонтекстноеМеню" id="247"/>
+					<ExtendedTooltip name="ЗаказыСтоимостьДоставкиРасширеннаяПодсказка" id="248"/>
+				</LabelField>
+				<LabelField name="ЗаказыЧислоСтрок" id="249">
+					<DataPath>Заказы.ЧислоСтрок</DataPath>
+					<ContextMenu name="ЗаказыЧислоСтрокКонтекстноеМеню" id="250"/>
+					<ExtendedTooltip name="ЗаказыЧислоСтрокРасширеннаяПодсказка" id="251"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Pages name="КарточкаЗаказа" id="252">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="КарточкаЗаказаРасширеннаяПодсказка" id="253"/>
+			<ChildItems>
+				<Page name="СтраницаСостав" id="254">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСоставРасширеннаяПодсказка" id="255"/>
+					<ChildItems>
+						<Table name="СтрокиЗаказа" id="115">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>8</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DataPath>СтрокиЗаказа</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтрокиЗаказаКонтекстноеМеню" id="116"/>
+							<AutoCommandBar name="СтрокиЗаказаКоманднаяПанель" id="117"/>
+							<ExtendedTooltip name="СтрокиЗаказаРасширеннаяПодсказка" id="118"/>
+							<SearchStringAddition name="СтрокиЗаказаСтрокаПоиска" id="434">
+								<AdditionSource>
+									<Item>СтрокиЗаказа</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиЗаказаСтрокаПоискаКонтекстноеМеню" id="435"/>
+								<ExtendedTooltip name="СтрокиЗаказаСтрокаПоискаРасширеннаяПодсказка" id="436"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтрокиЗаказаСостояниеПросмотра" id="437">
+								<AdditionSource>
+									<Item>СтрокиЗаказа</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиЗаказаСостояниеПросмотраКонтекстноеМеню" id="438"/>
+								<ExtendedTooltip name="СтрокиЗаказаСостояниеПросмотраРасширеннаяПодсказка" id="439"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтрокиЗаказаУправлениеПоиском" id="440">
+								<AdditionSource>
+									<Item>СтрокиЗаказа</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиЗаказаУправлениеПоискомКонтекстноеМеню" id="441"/>
+								<ExtendedTooltip name="СтрокиЗаказаУправлениеПоискомРасширеннаяПодсказка" id="442"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СтрокиЗаказаАртикул" id="119">
+									<DataPath>СтрокиЗаказа.Артикул</DataPath>
+									<ContextMenu name="СтрокиЗаказаАртикулКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="СтрокиЗаказаАртикулРасширеннаяПодсказка" id="121"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаНаименование" id="122">
+									<DataPath>СтрокиЗаказа.Наименование</DataPath>
+									<ContextMenu name="СтрокиЗаказаНаименованиеКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="СтрокиЗаказаНаименованиеРасширеннаяПодсказка" id="124"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаКлючСопоставления" id="125">
+									<DataPath>СтрокиЗаказа.КлючСопоставления</DataPath>
+									<ContextMenu name="СтрокиЗаказаКлючСопоставленияКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="СтрокиЗаказаКлючСопоставленияРасширеннаяПодсказка" id="127"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаШтрихкод" id="128">
+									<DataPath>СтрокиЗаказа.Штрихкод</DataPath>
+									<ContextMenu name="СтрокиЗаказаШтрихкодКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="СтрокиЗаказаШтрихкодРасширеннаяПодсказка" id="130"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаКоличество" id="131">
+									<DataPath>СтрокиЗаказа.Количество</DataPath>
+									<ContextMenu name="СтрокиЗаказаКоличествоКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="СтрокиЗаказаКоличествоРасширеннаяПодсказка" id="133"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаЦена" id="134">
+									<DataPath>СтрокиЗаказа.Цена</DataPath>
+									<ContextMenu name="СтрокиЗаказаЦенаКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="СтрокиЗаказаЦенаРасширеннаяПодсказка" id="136"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаСумма" id="137">
+									<DataPath>СтрокиЗаказа.Сумма</DataPath>
+									<ContextMenu name="СтрокиЗаказаСуммаКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="СтрокиЗаказаСуммаРасширеннаяПодсказка" id="139"/>
+								</LabelField>
+								<LabelField name="СтрокиЗаказаСкидка" id="140">
+									<DataPath>СтрокиЗаказа.Скидка</DataPath>
+									<ContextMenu name="СтрокиЗаказаСкидкаКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="СтрокиЗаказаСкидкаРасширеннаяПодсказка" id="142"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПокупатель" id="256">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупатель</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПокупательРасширеннаяПодсказка" id="257"/>
+					<ChildItems>
+						<InputField name="ПокупательФамилия" id="143">
+							<DataPath>ПокупательФамилия</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательФамилияКонтекстноеМеню" id="459"/>
+							<ExtendedTooltip name="ПокупательФамилияРасширеннаяПодсказка" id="144"/>
+						</InputField>
+						<InputField name="ПокупательИмя" id="145">
+							<DataPath>ПокупательИмя</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательИмяКонтекстноеМеню" id="461"/>
+							<ExtendedTooltip name="ПокупательИмяРасширеннаяПодсказка" id="146"/>
+						</InputField>
+						<InputField name="ПокупательТелефон" id="147">
+							<DataPath>ПокупательТелефон</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательТелефонКонтекстноеМеню" id="463"/>
+							<ExtendedTooltip name="ПокупательТелефонРасширеннаяПодсказка" id="148"/>
+						</InputField>
+						<InputField name="ПокупательПочта" id="149">
+							<DataPath>ПокупательПочта</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательПочтаКонтекстноеМеню" id="465"/>
+							<ExtendedTooltip name="ПокупательПочтаРасширеннаяПодсказка" id="150"/>
+						</InputField>
+						<InputField name="ПокупательИНН" id="151">
+							<DataPath>ПокупательИНН</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательИННКонтекстноеМеню" id="467"/>
+							<ExtendedTooltip name="ПокупательИННРасширеннаяПодсказка" id="152"/>
+						</InputField>
+						<InputField name="ПокупательКПП" id="153">
+							<DataPath>ПокупательКПП</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательКППКонтекстноеМеню" id="469"/>
+							<ExtendedTooltip name="ПокупательКППРасширеннаяПодсказка" id="154"/>
+						</InputField>
+						<InputField name="ПокупательАдрес" id="155">
+							<DataPath>ПокупательАдрес</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПокупательАдресКонтекстноеМеню" id="471"/>
+							<ExtendedTooltip name="ПокупательАдресРасширеннаяПодсказка" id="156"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДоставка" id="258">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доставка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДоставкаРасширеннаяПодсказка" id="259"/>
+					<ChildItems>
+						<InputField name="ДоставкаСлужба" id="157">
+							<DataPath>ДоставкаСлужба</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаСлужбаКонтекстноеМеню" id="473"/>
+							<ExtendedTooltip name="ДоставкаСлужбаРасширеннаяПодсказка" id="158"/>
+						</InputField>
+						<InputField name="ДоставкаКодСлужбы" id="159">
+							<DataPath>ДоставкаКодСлужбы</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаКодСлужбыКонтекстноеМеню" id="475"/>
+							<ExtendedTooltip name="ДоставкаКодСлужбыРасширеннаяПодсказка" id="160"/>
+						</InputField>
+						<InputField name="ДоставкаПунктВыдачи" id="161">
+							<DataPath>ДоставкаПунктВыдачи</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаПунктВыдачиКонтекстноеМеню" id="477"/>
+							<ExtendedTooltip name="ДоставкаПунктВыдачиРасширеннаяПодсказка" id="162"/>
+						</InputField>
+						<InputField name="ДоставкаСтоимость" id="163">
+							<DataPath>ДоставкаСтоимость</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаСтоимостьКонтекстноеМеню" id="479"/>
+							<ExtendedTooltip name="ДоставкаСтоимостьРасширеннаяПодсказка" id="164"/>
+						</InputField>
+						<InputField name="ДоставкаДата" id="165">
+							<DataPath>ДоставкаДата</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаДатаКонтекстноеМеню" id="481"/>
+							<ExtendedTooltip name="ДоставкаДатаРасширеннаяПодсказка" id="166"/>
+						</InputField>
+						<InputField name="ДоставкаОписание" id="368">
+							<DataPath>ДоставкаОписание</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДоставкаОписаниеКонтекстноеМеню" id="483"/>
+							<ExtendedTooltip name="ДоставкаОписаниеРасширеннаяПодсказка" id="369"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОплата" id="260">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата и скидки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОплатаРасширеннаяПодсказка" id="261"/>
+					<ChildItems>
+						<InputField name="ОплатаСостояние" id="167">
+							<DataPath>ОплатаСостояние</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОплатаСостояниеКонтекстноеМеню" id="485"/>
+							<ExtendedTooltip name="ОплатаСостояниеРасширеннаяПодсказка" id="168"/>
+						</InputField>
+						<InputField name="ОплатаОписание" id="169">
+							<DataPath>ОплатаОписание</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОплатаОписаниеКонтекстноеМеню" id="487"/>
+							<ExtendedTooltip name="ОплатаОписаниеРасширеннаяПодсказка" id="170"/>
+						</InputField>
+						<InputField name="ОплатаДата" id="171">
+							<DataPath>ОплатаДата</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОплатаДатаКонтекстноеМеню" id="489"/>
+							<ExtendedTooltip name="ОплатаДатаРасширеннаяПодсказка" id="172"/>
+						</InputField>
+						<InputField name="ОплатаИтог" id="173">
+							<DataPath>ОплатаИтог</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОплатаИтогКонтекстноеМеню" id="491"/>
+							<ExtendedTooltip name="ОплатаИтогРасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="СкидкаОписание" id="175">
+							<DataPath>СкидкаОписание</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкидкаОписаниеКонтекстноеМеню" id="493"/>
+							<ExtendedTooltip name="СкидкаОписаниеРасширеннаяПодсказка" id="176"/>
+						</InputField>
+						<InputField name="СкидкаПроцент" id="177">
+							<DataPath>СкидкаПроцент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкидкаПроцентКонтекстноеМеню" id="495"/>
+							<ExtendedTooltip name="СкидкаПроцентРасширеннаяПодсказка" id="178"/>
+						</InputField>
+						<InputField name="СкидкаСумма" id="179">
+							<DataPath>СкидкаСумма</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкидкаСуммаКонтекстноеМеню" id="497"/>
+							<ExtendedTooltip name="СкидкаСуммаРасширеннаяПодсказка" id="180"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительныеПоля" id="262">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные поля</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДополнительныеПоляРасширеннаяПодсказка" id="263"/>
+					<ChildItems>
+						<Table name="ДополнительныеПоляЗаказа" id="181">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>8</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DataPath>ДополнительныеПоляЗаказа</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДополнительныеПоляЗаказаКонтекстноеМеню" id="182"/>
+							<AutoCommandBar name="ДополнительныеПоляЗаказаКоманднаяПанель" id="183"/>
+							<ExtendedTooltip name="ДополнительныеПоляЗаказаРасширеннаяПодсказка" id="184"/>
+							<SearchStringAddition name="ДополнительныеПоляЗаказаСтрокаПоиска" id="499">
+								<AdditionSource>
+									<Item>ДополнительныеПоляЗаказа</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеПоляЗаказаСтрокаПоискаКонтекстноеМеню" id="500"/>
+								<ExtendedTooltip name="ДополнительныеПоляЗаказаСтрокаПоискаРасширеннаяПодсказка" id="501"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДополнительныеПоляЗаказаСостояниеПросмотра" id="502">
+								<AdditionSource>
+									<Item>ДополнительныеПоляЗаказа</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеПоляЗаказаСостояниеПросмотраКонтекстноеМеню" id="503"/>
+								<ExtendedTooltip name="ДополнительныеПоляЗаказаСостояниеПросмотраРасширеннаяПодсказка" id="504"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДополнительныеПоляЗаказаУправлениеПоиском" id="505">
+								<AdditionSource>
+									<Item>ДополнительныеПоляЗаказа</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеПоляЗаказаУправлениеПоискомКонтекстноеМеню" id="506"/>
+								<ExtendedTooltip name="ДополнительныеПоляЗаказаУправлениеПоискомРасширеннаяПодсказка" id="507"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДополнительныеПоляЗаказаИмя" id="185">
+									<DataPath>ДополнительныеПоляЗаказа.Имя</DataPath>
+									<ContextMenu name="ДополнительныеПоляЗаказаИмяКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ДополнительныеПоляЗаказаИмяРасширеннаяПодсказка" id="187"/>
+								</LabelField>
+								<LabelField name="ДополнительныеПоляЗаказаЗначение" id="188">
+									<DataPath>ДополнительныеПоляЗаказа.Значение</DataPath>
+									<ContextMenu name="ДополнительныеПоляЗаказаЗначениеКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ДополнительныеПоляЗаказаЗначениеРасширеннаяПодсказка" id="190"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСыройОтвет" id="264">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сырой ответ</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСыройОтветРасширеннаяПодсказка" id="265"/>
+					<ChildItems>
+						<InputField name="СыройОтвет" id="191">
+							<DataPath>СыройОтвет</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Height>15</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="СыройОтветКонтекстноеМеню" id="518"/>
+							<ExtendedTooltip name="СыройОтветРасширеннаяПодсказка" id="192"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Table name="ПротоколЗапросов" id="266">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>8</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<DataPath>ПротоколЗапросов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПротоколЗапросовКонтекстноеМеню" id="267"/>
+			<AutoCommandBar name="ПротоколЗапросовКоманднаяПанель" id="268"/>
+			<ExtendedTooltip name="ПротоколЗапросовРасширеннаяПодсказка" id="269"/>
+			<SearchStringAddition name="ПротоколЗапросовСтрокаПоиска" id="520">
+				<AdditionSource>
+					<Item>ПротоколЗапросов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПротоколЗапросовСтрокаПоискаКонтекстноеМеню" id="521"/>
+				<ExtendedTooltip name="ПротоколЗапросовСтрокаПоискаРасширеннаяПодсказка" id="522"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПротоколЗапросовСостояниеПросмотра" id="523">
+				<AdditionSource>
+					<Item>ПротоколЗапросов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПротоколЗапросовСостояниеПросмотраКонтекстноеМеню" id="524"/>
+				<ExtendedTooltip name="ПротоколЗапросовСостояниеПросмотраРасширеннаяПодсказка" id="525"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПротоколЗапросовУправлениеПоиском" id="526">
+				<AdditionSource>
+					<Item>ПротоколЗапросов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПротоколЗапросовУправлениеПоискомКонтекстноеМеню" id="527"/>
+				<ExtendedTooltip name="ПротоколЗапросовУправлениеПоискомРасширеннаяПодсказка" id="528"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПротоколЗапросовМомент" id="270">
+					<DataPath>ПротоколЗапросов.Момент</DataPath>
+					<ContextMenu name="ПротоколЗапросовМоментКонтекстноеМеню" id="271"/>
+					<ExtendedTooltip name="ПротоколЗапросовМоментРасширеннаяПодсказка" id="272"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовМетод" id="273">
+					<DataPath>ПротоколЗапросов.Метод</DataPath>
+					<ContextMenu name="ПротоколЗапросовМетодКонтекстноеМеню" id="274"/>
+					<ExtendedTooltip name="ПротоколЗапросовМетодРасширеннаяПодсказка" id="275"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовПуть" id="276">
+					<DataPath>ПротоколЗапросов.Путь</DataPath>
+					<ContextMenu name="ПротоколЗапросовПутьКонтекстноеМеню" id="277"/>
+					<ExtendedTooltip name="ПротоколЗапросовПутьРасширеннаяПодсказка" id="278"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовКод" id="279">
+					<DataPath>ПротоколЗапросов.Код</DataPath>
+					<ContextMenu name="ПротоколЗапросовКодКонтекстноеМеню" id="280"/>
+					<ExtendedTooltip name="ПротоколЗапросовКодРасширеннаяПодсказка" id="281"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовДлительностьМс" id="282">
+					<DataPath>ПротоколЗапросов.ДлительностьМс</DataPath>
+					<ContextMenu name="ПротоколЗапросовДлительностьМсКонтекстноеМеню" id="283"/>
+					<ExtendedTooltip name="ПротоколЗапросовДлительностьМсРасширеннаяПодсказка" id="284"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовЛимит" id="285">
+					<DataPath>ПротоколЗапросов.Лимит</DataPath>
+					<ContextMenu name="ПротоколЗапросовЛимитКонтекстноеМеню" id="286"/>
+					<ExtendedTooltip name="ПротоколЗапросовЛимитРасширеннаяПодсказка" id="287"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовПопытка" id="288">
+					<DataPath>ПротоколЗапросов.Попытка</DataPath>
+					<ContextMenu name="ПротоколЗапросовПопыткаКонтекстноеМеню" id="289"/>
+					<ExtendedTooltip name="ПротоколЗапросовПопыткаРасширеннаяПодсказка" id="290"/>
+				</LabelField>
+				<LabelField name="ПротоколЗапросовКомментарий" id="291">
+					<DataPath>ПротоколЗапросов.Комментарий</DataPath>
+					<ContextMenu name="ПротоколЗапросовКомментарийКонтекстноеМеню" id="292"/>
+					<ExtendedTooltip name="ПротоколЗапросовКомментарийРасширеннаяПодсказка" id="293"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПросмотрЗаказовИнтернетМагазинаInsales</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдресМагазина" id="294">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес магазина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторКлюча" id="295">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор ключа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольКлюча" id="296">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль ключа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Таймаут" id="297">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут, с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатПроверки" id="298">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодС" id="299">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменены с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодПо" id="300">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменены по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерСтраницы" id="301">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказов на странице</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПределСтраниц" id="302">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не больше страниц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеЗагрузки" id="303">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдетЗагрузка" id="304">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идёт загрузка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерТекущейСтраницы" id="305">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер текущей страницы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПопыткаСтраницы" id="306">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Попытка загрузки страницы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СыройОтвет" id="307">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сырой ответ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательФамилия" id="308">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательИмя" id="309">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательТелефон" id="310">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательПочта" id="311">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная почта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательИНН" id="312">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательКПП" id="313">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПокупательАдрес" id="314">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаСлужба" id="315">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служба доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаКодСлужбы" id="316">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Машинный код службы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаПунктВыдачи" id="317">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пункт выдачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаСтоимость" id="318">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаДата" id="319">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаОписание" id="370">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаСостояние" id="320">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаОписание" id="321">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание платежа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаДата" id="322">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОплатаИтог" id="323">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого по заказу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкидкаОписание" id="324">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкидкаПроцент" id="325">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент скидки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкидкаСумма" id="326">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма скидки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Заказы" id="327">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерНаСайте" id="328">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер на сайте</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="329">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Создан" id="330">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создан</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Изменен" id="331">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменён</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Покупатель" id="332">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="333">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Оплачен" id="334">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплачен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусВыполнения" id="335">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СлужбаДоставки" id="336">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служба доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтоимостьДоставки" id="337">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧислоСтрок" id="338">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строк</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СырыеДанные" id="339">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сырые данные</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтрокиЗаказа" id="340">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав заказа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Артикул" id="341">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="342">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючСопоставления" id="343">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ сопоставления (товар / вариант)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="344">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="345">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="346">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="347">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Скидка" id="348">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скидка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДополнительныеПоляЗаказа" id="349">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные поля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="350">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="351">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПротоколЗапросов" id="352">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол запросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Момент" id="353">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Момент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Метод" id="354">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Путь" id="355">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="356">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДлительностьМс" id="357">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительность, мс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Лимит" id="358">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток лимита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Попытка" id="359">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Попытка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="360">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьСвязь" id="361">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить связь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Один запрос к магазину, чтобы убедиться в доступности и правах ключа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСвязь</Action>
+		</Command>
+		<Command name="ЗагрузитьЗаказы" id="362">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить заказы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Читает заказы за период постранично, ничего не записывая в базу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьЗаказы</Action>
+		</Command>
+		<Command name="ПрерватьЗагрузку" id="363">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Останавливает загрузку; уже полученные заказы остаются в списке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрерватьЗагрузку</Action>
+		</Command>
+		<Command name="ВыгрузитьВТабличныйДокумент" id="364">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собирает лист со списком заказов и составом выделенного; дальше работают штатные «Сохранить как» и «Печать»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВТабличныйДокумент</Action>
+		</Command>
+		<Command name="СохранитьСыройОтвет" id="365">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить ответ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохраняет ответ магазина по выделенному заказу в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьСыройОтвет</Action>
+		</Command>
+		<Command name="СохранитьНастройкиВФайл" id="366">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохраняет адрес магазина и параметры отбора в файл; пароль ключа в файл не попадает</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройкиВФайл</Action>
+		</Command>
+		<Command name="ЗагрузитьНастройкиИзФайла" id="367">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Читает настройки из ранее сохранённого файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНастройкиИзФайла</Action>
+		</Command>
+	</Commands>
+</Form>
